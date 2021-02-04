@@ -4,29 +4,43 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Post from "@/views/Post";
 import Category from "@/views/Category";
+import i18n from '../i18n';
+
 
 Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
-        name: 'Home',
-        component: Home
+      path: '/',
+      redirect: `/${i18n.locale}`
     },
     {
-        path: '/about',
-        name: 'About',
-        component:About
-    },
-    {
-        path: '/post',
-        name: 'Product',
-        component:Post
-    },
-    {
-        path: '/category',
-        name: 'Category',
-        component:Category
+        path: '/:lang',
+        component:{
+            render (c) {return c('router-view')}
+        },
+        children: [
+            {
+                path: '/',
+                name: 'Home',
+                component: Home
+            },
+            {
+                path: 'about',
+                name: 'About',
+                component: About
+            },
+            {
+                path: 'post',
+                name: 'Post',
+                component: Post
+            },
+            {
+                path: 'category',
+                name: 'Category',
+                component: Category
+            }
+        ]
     }
 ]
 

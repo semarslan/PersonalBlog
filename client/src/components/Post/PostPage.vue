@@ -1,12 +1,12 @@
 <template>
 <div class="pt-12">
-this is Home page
+  <card>Post Card</card>
 </div>
 </template>
 
 <script>
 export default {
-  name: "Home"
+  name: "PostPage"
 }
 </script>
 

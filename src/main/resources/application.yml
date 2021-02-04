@@ -11,11 +11,6 @@ spring:
     driver-class-name: org.postgresql.Driver
     initialization-mode: always
 
-  data:
-    web:
-      pageable:
-        default-page-size: 10
-        max-page-size: 100
   jpa:
     properties:
       javax:

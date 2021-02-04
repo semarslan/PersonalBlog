@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    user Update
+  </div>
 </template>
 
 <script>

@@ -6,6 +6,9 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -13,6 +16,7 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 @Builder
+@Table(name = "posts")
 public class Post {
 
     @Id
@@ -30,8 +34,12 @@ public class Post {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
-    @ManyToOne
-    private Category category;
+//    @ManyToMany(cascade = CascadeType.ALL)
+//    @JoinTable(
+//            name = "post_category",
+//            joinColumns = @JoinColumn(name="id"),
+//            inverseJoinColumns = @JoinColumn(name = "categoryId"))
+//    private Set<Category> categories = new HashSet<>();
 
     private String image;
 

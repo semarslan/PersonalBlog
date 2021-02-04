@@ -1,16 +1,16 @@
 <template>
 
-  <PostList/>
+  <PostPage/>
 
 </template>
 
 <script>
-import PostList from "@/components/Post/PostList";
+import PostPage from "@/components/Post/PostPage";
 
 export default {
   name: "Post",
   components:{
-    PostList
+    PostPage,
   }
 }
 </script>

@@ -1,5 +1,7 @@
 <template>
-
+<div>
+  create category
+</div>
 </template>
 
 <script>

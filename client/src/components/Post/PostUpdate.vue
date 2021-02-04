@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    update post
+  </div>
 </template>
 
 <script>
